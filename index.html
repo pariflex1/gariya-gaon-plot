@@ -76,10 +76,47 @@ html {
 
 
 /* =========================================
+   VIDEO
+========================================= */
+
+.hero-video {
+
+    display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
+    margin: 0;
+    padding: 0;
+
+    /*
+       Remove extra inline spacing
+    */
+    vertical-align: middle;
+
+    /*
+       Keep video looking like
+       a full-width image.
+    */
+    object-fit: cover;
+
+    /*
+       Prevent user interaction
+       with the video.
+    */
+    pointer-events: none;
+
+}
+
+
+/* =========================================
    CLICKABLE IMAGES
 ========================================= */
 
 .image-link {
+
     display: block;
 
     width: 100%;
@@ -90,9 +127,11 @@ html {
     line-height: 0;
 
     text-decoration: none;
+
 }
 
 .image-link img {
+
     display: block;
 
     width: 100%;
@@ -102,6 +141,7 @@ html {
 
     margin: 0;
     padding: 0;
+
 }
 
 
@@ -115,14 +155,14 @@ html {
 
     overflow: hidden;
 
-    margin: 12px 0 12px;
+    margin: 12px 0;
 
     padding: 0;
 
     /*
-       Allow normal vertical page scrolling
-       while horizontal swipe works inside
-       the slider.
+       Allows vertical page scrolling
+       while horizontal finger swipe
+       works inside slider.
     */
     touch-action: pan-y;
 
@@ -132,6 +172,7 @@ html {
     -webkit-user-select: none;
 
     -webkit-tap-highlight-color: transparent;
+
 }
 
 
@@ -156,6 +197,7 @@ html {
     transform: translate3d(0, 0, 0);
 
     will-change: transform;
+
 }
 
 
@@ -172,6 +214,7 @@ html {
     margin-right: 8px;
 
     padding: 0;
+
 }
 
 
@@ -195,11 +238,13 @@ html {
     padding: 0;
 
     /*
-       Prevent normal browser image dragging.
+       Prevent normal browser
+       image dragging.
     */
     pointer-events: none;
 
     -webkit-user-drag: none;
+
 }
 
 
@@ -210,8 +255,11 @@ html {
 @media screen and (max-width: 500px) {
 
     .slider {
+
         margin-top: 10px;
+
         margin-bottom: 10px;
+
     }
 
     .slide {
@@ -254,20 +302,32 @@ html {
 
 
 <!-- =========================================
-     IMAGE 1
+     AUTOPLAY VIDEO
+     FILE: Image/video.webm
 ========================================= -->
 
-<img
-    class="page-image"
-    src="Image/1.webp?raw=true"
-    loading="lazy"
-    alt="गढ़िया गाँव प्लॉट"
+<video
+    class="hero-video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+    disablepictureinpicture
+    disableremoteplayback
 >
+
+    <source
+        src="Image/video.webm"
+        type="video/webm"
+    >
+
+</video>
 
 
 <!-- =========================================
-     SLIDER
-     SHOWS IMMEDIATELY AFTER IMAGE 1
+     MANUAL TOUCH SLIDER
+     SHOWS AFTER VIDEO
 ========================================= -->
 
 <div
@@ -466,7 +526,7 @@ html {
 
 
 <!-- =========================================
-     GOOGLE MAP IMAGE
+     GOOGLE MAP
 ========================================= -->
 
 <a
@@ -486,7 +546,7 @@ html {
 
 
 <!-- =========================================
-     CALL IMAGE
+     CALL BUTTON
 ========================================= -->
 
 <a
@@ -554,10 +614,6 @@ html {
         }
 
 
-        /*
-         * Keep slider inside boundaries
-         */
-
         currentX =
             Math.max(
                 -maxScroll,
@@ -574,7 +630,7 @@ html {
 
 
     /* -----------------------------------------
-       UPDATE POSITION
+       UPDATE SLIDER
     ----------------------------------------- */
 
     function updateSlider() {
@@ -640,7 +696,7 @@ html {
 
 
             /*
-             * Don't move beyond
+             * Prevent moving beyond
              * the first slide.
              */
 
@@ -652,7 +708,7 @@ html {
 
 
             /*
-             * Don't move beyond
+             * Prevent moving beyond
              * the last slide.
              */
 
@@ -728,6 +784,46 @@ html {
 
 
 })();
+
+
+/* =========================================
+   ENSURE VIDEO AUTOPLAYS
+========================================= */
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const video =
+            document.querySelector(".hero-video");
+
+        if (video) {
+
+            video.muted = true;
+
+            const playPromise =
+                video.play();
+
+            if (
+                playPromise !== undefined
+            ) {
+
+                playPromise.catch(
+                    function () {
+                        /*
+                         * Some browsers may block
+                         * autoplay until interaction.
+                         * Muted autoplay is normally allowed.
+                         */
+                    }
+                );
+
+            }
+
+        }
+
+    }
+);
 
 </script>
 
