@@ -1,140 +1,521 @@
 <!DOCTYPE html>
-<html amp>
+<html lang="hi">
 <head>
 <meta charset="utf-8">
-<title>Invitation</title>
-<meta name="गढ़िया गाँव प्लॉट" />
-<meta property="og:title" content="गढ़िया गाँव प्लॉट" />
-<meta property="og:description" content="गढ़िया गाँव, झाँसी" />
-<meta property="og:image" content="https://raw.githubusercontent.com/pariflex1/mustara-plots/refs/heads/main/Image/og.webp" />
+<title>गढ़िया गाँव प्लॉट</title>
+<meta name="description" content="गढ़िया गाँव, झाँसी">
+<meta property="og:title" content="गढ़िया गाँव प्लॉट">
+<meta property="og:description" content="गढ़िया गाँव, झाँसी">
+<meta property="og:image" content="https://raw.githubusercontent.com/pariflex1/mustara-plots/refs/heads/main/Image/og.webp">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <style>
-img {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 100%;
-  height: 100%;
+
+* {
+    box-sizing: border-box;
 }
-.img-fluid {
-max-width: 100%;
-height: auto;
-line-height: 0;
-}
-@media screen and (max-width: 500px) {
-.responsive  {
-padding: 0px 0px;
-display: block;
-margin: 0px 0px;
-}
-}
-.responsive img {
-display: block;
-possition: center;   
-}
+
+html,
 body {
-   margin: 0;
-   padding: 0;
+    margin: 0;
+    padding: 0;
+    background: #ffffff;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+/* Hide scrollbar */
 ::-webkit-scrollbar {
-  display: none;
+    display: none;
+}
+
+/* Normal images */
+body > img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* Clickable images */
+a {
+    display: block;
+    margin: 0;
+    padding: 0;
+    line-height: 0;
+    text-decoration: none;
+}
+
+a img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0;
+}
+
+/* =========================
+   HORIZONTAL SCROLL SLIDER
+========================= */
+
 .slider {
-  overflow: hidden;
-  margin-top: 15px;
-  touch-action: pan-y;
-  cursor: grab;
-  user-select: none;
-  -webkit-user-select: none;
+    width: 100%;
+    overflow: hidden;
+    margin: 15px 0 0;
+    padding: 0;
+
+    touch-action: pan-y;
+    cursor: grab;
+
+    user-select: none;
+    -webkit-user-select: none;
+
+    -webkit-overflow-scrolling: touch;
 }
-.slider .track {
-  display: flex;
-  width: max-content;
+
+.slider:active {
+    cursor: grabbing;
 }
-.slider .slide {
-  flex: 0 0 90%;
+
+.track {
+    display: flex;
+    width: max-content;
+    will-change: transform;
 }
-.slider .slide img {
-  width: 100%;
-  height: auto;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  display: block;
-  margin: 0;
+
+.slide {
+    flex: 0 0 90vw;
+    width: 90vw;
+    margin-right: 10px;
 }
+
+.slide img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+
+    margin: 0;
+    padding: 0;
+
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+/* Mobile */
+@media screen and (max-width: 500px) {
+
+    .slider {
+        margin-top: 10px;
+    }
+
+    .slide {
+        flex: 0 0 88vw;
+        width: 88vw;
+        margin-right: 8px;
+    }
+
+}
+
+/* Desktop */
+@media screen and (min-width: 501px) {
+
+    .slide {
+        flex: 0 0 420px;
+        width: 420px;
+    }
+
+}
+
 </style>
+
 </head>
-<body style="background-color:#FFFFFF">
-<img src="Image/1.webp?raw=true" loading="lazy" alt="..." />
-  <img src="Image/2.webp?raw=true" loading="lazy" alt="..." />
-  <img src="Image/3.webp?raw=true" loading="lazy" alt="..." />
-  <img src="Image/4.webp?raw=true" loading="lazy" alt="..." />
-    <a href="https://maps.app.goo.gl/rbMPVuyPNJwrTDot5?g_st=awb"><img src="Image/5.webp?raw=true" loading="lazy" alt="..." />
-  <a href="tel:8400638468"><img src="Image/6.webp?raw=true" loading="lazy" alt="..." />
-  <div class="slider">
-    <div class="track">
-      <div class="slide"><img src="scroll/scroll (1).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (2).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (3).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (4).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (5).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (6).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (7).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (8).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (9).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (10).webp" loading="lazy" alt="..." /></div>
-      <div class="slide"><img src="scroll/scroll (11).webp" loading="lazy" alt="..." /></div>
+
+<body>
+
+<!-- =========================
+     MAIN IMAGES
+========================= -->
+
+<img
+src="Image/1.webp?raw=true"
+loading="lazy"
+alt="गढ़िया गाँव प्लॉट"
+
+>
+
+<img
+src="Image/2.webp?raw=true"
+loading="lazy"
+alt="गढ़िया गाँव प्लॉट"
+
+>
+
+<img
+src="Image/3.webp?raw=true"
+loading="lazy"
+alt="गढ़िया गाँव प्लॉट"
+
+>
+
+<img
+src="Image/4.webp?raw=true"
+loading="lazy"
+alt="गढ़िया गाँव प्लॉट"
+
+>
+
+<!-- Google Maps -->
+
+<a
+href="https://maps.app.goo.gl/rbMPVuyPNJwrTDot5?g_st=awb"
+target="_blank"
+rel="noopener"
+
+>
+
+```
+<img
+    src="Image/5.webp?raw=true"
+    loading="lazy"
+    alt="गढ़िया गाँव लोकेशन"
+>
+```
+
+</a>
+
+<!-- Call -->
+
+<a href="tel:8400638468">
+
+```
+<img
+    src="Image/6.webp?raw=true"
+    loading="lazy"
+    alt="कॉल करें"
+>
+```
+
+</a>
+
+<!-- =========================
+     CONTINUOUS SCROLL SLIDER
+========================= -->
+
+<div class="slider" id="slider">
+
+<div class="track" id="track">
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (1).webp"
+            loading="lazy"
+            alt="Plot Image 1"
+        >
     </div>
-  </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (2).webp"
+            loading="lazy"
+            alt="Plot Image 2"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (3).webp"
+            loading="lazy"
+            alt="Plot Image 3"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (4).webp"
+            loading="lazy"
+            alt="Plot Image 4"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (5).webp"
+            loading="lazy"
+            alt="Plot Image 5"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (6).webp"
+            loading="lazy"
+            alt="Plot Image 6"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (7).webp"
+            loading="lazy"
+            alt="Plot Image 7"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (8).webp"
+            loading="lazy"
+            alt="Plot Image 8"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (9).webp"
+            loading="lazy"
+            alt="Plot Image 9"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (10).webp"
+            loading="lazy"
+            alt="Plot Image 10"
+        >
+    </div>
+
+    <div class="slide">
+        <img
+            src="scroll/scroll (11).webp"
+            loading="lazy"
+            alt="Plot Image 11"
+        </div>
+
+</div>
+```
+
+</div>
+
 <script>
-(function() {
-  var slider = document.querySelector('.slider');
-  var track = slider.querySelector('.track');
-  var slides = Array.prototype.slice.call(track.children);
-  slides.forEach(function(slide) {
-    track.appendChild(slide.cloneNode(true));
-  });
 
-  var pos = 0;
-  var speed = 1.5;
-  var half = 0;
-  var dragging = false;
-  var startX = 0;
-  var startPos = 0;
+(function () {
 
-  function measure() {
-    half = track.scrollWidth / 2;
-  }
-  window.addEventListener('resize', measure);
-  measure();
+    const slider = document.getElementById("slider");
+    const track = document.getElementById("track");
 
-  function setPos(p) {
-    while (p < 0) p += half;
-    while (p >= half) p -= half;
-    pos = p;
-    track.style.transform = 'translateX(' + (-pos) + 'px)';
-  }
+    if (!slider || !track) {
+        return;
+    }
 
-  slider.addEventListener('pointerdown', function(e) {
-    dragging = true;
-    startX = e.clientX;
-    startPos = pos;
-    slider.setPointerCapture(e.pointerId);
-  });
-  slider.addEventListener('pointermove', function(e) {
-    if (!dragging) return;
-    setPos(startPos - (e.clientX - startX));
-  });
-  slider.addEventListener('pointerup', function() {
-    dragging = false;
-  });
-  slider.addEventListener('pointercancel', function() {
-    dragging = false;
-  });
+    /*
+     * Clone all slides.
+     * This creates a seamless infinite slider.
+     */
 
-  function step() {
-    if (!dragging) setPos(pos + speed);
-    requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
+    const originalSlides = Array.from(track.children);
+
+    originalSlides.forEach(function (slide) {
+        track.appendChild(slide.cloneNode(true));
+    });
+
+
+    let position = 0;
+
+    /*
+     * Scroll speed.
+     * Lower = slower
+     * Higher = faster
+     */
+
+    const speed = 0.7;
+
+    let halfWidth = 0;
+
+    let dragging = false;
+
+    let startX = 0;
+
+    let startPosition = 0;
+
+
+    /*
+     * Calculate the width of the
+     * original set of slides.
+     */
+
+    function measure() {
+
+        halfWidth = track.scrollWidth / 2;
+
+    }
+
+
+    /*
+     * Keep position inside the
+     * first set of slides.
+     */
+
+    function normalize(value) {
+
+        if (halfWidth <= 0) {
+            return 0;
+        }
+
+        value = value % halfWidth;
+
+        if (value < 0) {
+            value += halfWidth;
+        }
+
+        return value;
+
+    }
+
+
+    /*
+     * Move slider.
+     */
+
+    function setPosition(value) {
+
+        position = normalize(value);
+
+        track.style.transform =
+            "translate3d(" +
+            (-position) +
+            "px, 0, 0)";
+
+    }
+
+
+    /*
+     * Resize handling.
+     */
+
+    window.addEventListener(
+        "resize",
+        measure
+    );
+
+
+    measure();
+
+
+    /*
+     * Touch / Mouse drag
+     */
+
+    slider.addEventListener(
+        "pointerdown",
+        function (event) {
+
+            dragging = true;
+
+            startX = event.clientX;
+
+            startPosition = position;
+
+            slider.setPointerCapture(
+                event.pointerId
+            );
+
+        }
+    );
+
+
+    slider.addEventListener(
+        "pointermove",
+        function (event) {
+
+            if (!dragging) {
+                return;
+            }
+
+            const distance =
+                event.clientX - startX;
+
+            setPosition(
+                startPosition - distance
+            );
+
+        }
+    );
+
+
+    function stopDragging(event) {
+
+        dragging = false;
+
+        try {
+
+            slider.releasePointerCapture(
+                event.pointerId
+            );
+
+        } catch (error) {}
+
+    }
+
+
+    slider.addEventListener(
+        "pointerup",
+        stopDragging
+    );
+
+    slider.addEventListener(
+        "pointercancel",
+        stopDragging
+    );
+
+    slider.addEventListener(
+        "pointerleave",
+        function () {
+
+            /*
+             * Don't stop dragging on mobile.
+             * Pointer capture handles this.
+             */
+
+        }
+    );
+
+
+    /*
+     * Automatic continuous scrolling.
+     */
+
+    function animate() {
+
+        if (!dragging) {
+
+            setPosition(
+                position + speed
+            );
+
+        }
+
+        requestAnimationFrame(
+            animate
+        );
+
+    }
+
+
+    requestAnimationFrame(
+        animate
+    );
+
 })();
+
 </script>
+
+</body>
 </html>
