@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html amp>
+<head>
+<meta charset="utf-8">
+<title>Invitation</title>
+<meta name="गढ़िया गाँव प्लॉट" />
+<meta property="og:title" content="गढ़िया गाँव प्लॉट" />
+<meta property="og:description" content="गढ़िया गाँव, झाँसी" />
+<meta property="og:image" content="https://raw.githubusercontent.com/pariflex1/mustara-plots/refs/heads/main/Image/og.webp" />
+<style>
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  height: 100%;
+}
+.img-fluid {
+max-width: 100%;
+height: auto;
+line-height: 0;
+}
+@media screen and (max-width: 500px) {
+.responsive  {
+padding: 0px 0px;
+display: block;
+margin: 0px 0px;
+}
+}
+.responsive img {
+display: block;
+possition: center;   
+}
+body {
+   margin: 0;
+   padding: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+.slider {
+  overflow: hidden;
+  margin-top: 15px;
+  touch-action: pan-y;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+}
+.slider .track {
+  display: flex;
+  width: max-content;
+}
+.slider .slide {
+  flex: 0 0 90%;
+}
+.slider .slide img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+}
+</style>
+</head>
+<body style="background-color:#FFFFFF">
+<img src="Image/1.webp?raw=true" loading="lazy" alt="..." />
+  <img src="Image/2.webp?raw=true" loading="lazy" alt="..." />
+  <img src="Image/3.webp?raw=true" loading="lazy" alt="..." />
+  <img src="Image/4.webp?raw=true" loading="lazy" alt="..." />
+    <a href="https://maps.app.goo.gl/rbMPVuyPNJwrTDot5?g_st=awb"><img src="Image/5.webp?raw=true" loading="lazy" alt="..." />
+  <a href="tel:8400638468"><img src="Image/6.webp?raw=true" loading="lazy" alt="..." />
+  <div class="slider">
+    <div class="track">
+      <div class="slide"><img src="scroll/scroll (1).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (2).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (3).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (4).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (5).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (6).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (7).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (8).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (9).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (10).webp" loading="lazy" alt="..." /></div>
+      <div class="slide"><img src="scroll/scroll (11).webp" loading="lazy" alt="..." /></div>
+    </div>
+  </div>
+<script>
+(function() {
+  var slider = document.querySelector('.slider');
+  var track = slider.querySelector('.track');
+  var slides = Array.prototype.slice.call(track.children);
+  slides.forEach(function(slide) {
+    track.appendChild(slide.cloneNode(true));
+  });
+
+  var pos = 0;
+  var speed = 1.5;
+  var half = 0;
+  var dragging = false;
+  var startX = 0;
+  var startPos = 0;
+
+  function measure() {
+    half = track.scrollWidth / 2;
+  }
+  window.addEventListener('resize', measure);
+  measure();
+
+  function setPos(p) {
+    while (p < 0) p += half;
+    while (p >= half) p -= half;
+    pos = p;
+    track.style.transform = 'translateX(' + (-pos) + 'px)';
+  }
+
+  slider.addEventListener('pointerdown', function(e) {
+    dragging = true;
+    startX = e.clientX;
+    startPos = pos;
+    slider.setPointerCapture(e.pointerId);
+  });
+  slider.addEventListener('pointermove', function(e) {
+    if (!dragging) return;
+    setPos(startPos - (e.clientX - startX));
+  });
+  slider.addEventListener('pointerup', function() {
+    dragging = false;
+  });
+  slider.addEventListener('pointercancel', function() {
+    dragging = false;
+  });
+
+  function step() {
+    if (!dragging) setPos(pos + speed);
+    requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+})();
+</script>
+</html>
