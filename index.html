@@ -1,15 +1,32 @@
 <!DOCTYPE html>
 <html lang="hi">
+
 <head>
+
 <meta charset="utf-8">
+
 <title>गढ़िया गाँव प्लॉट</title>
+
 <meta name="description" content="गढ़िया गाँव, झाँसी">
-<meta property="og:title" content="गढ़िया गाँव प्लॉट">
-<meta property="og:description" content="गढ़िया गाँव, झाँसी">
-<meta property="og:image" content="https://raw.githubusercontent.com/pariflex1/gariya-gaon-plot/refs/heads/main/Image/og.webp">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<meta property="og:title"
+      content="गढ़िया गाँव प्लॉट">
+
+<meta property="og:description"
+      content="गढ़िया गाँव, झाँसी">
+
+<meta property="og:image"
+      content="https://raw.githubusercontent.com/pariflex1/mustara-plots/refs/heads/main/Image/og.webp">
+
 
 <style>
+
+/* =========================================
+   BASIC RESET
+========================================= */
 
 * {
     box-sizing: border-box;
@@ -19,6 +36,7 @@ html,
 body {
     margin: 0;
     padding: 0;
+    width: 100%;
     background: #ffffff;
 }
 
@@ -26,109 +44,203 @@ body {
     overflow-x: hidden;
 }
 
-/* Hide scrollbar */
+
+/* =========================================
+   HIDE SCROLLBAR
+========================================= */
+
 ::-webkit-scrollbar {
     display: none;
 }
 
-/* Normal images */
-body > img {
-    display: block;
-    width: 100%;
-    max-width: 100%;
-    height: auto;
-    margin: 0 auto;
+html {
+    scrollbar-width: none;
 }
 
-/* Clickable images */
-a {
+
+/* =========================================
+   NORMAL PAGE IMAGES
+========================================= */
+
+.page-image {
     display: block;
+
+    width: 100%;
+    max-width: 100%;
+
+    height: auto;
+
     margin: 0;
     padding: 0;
+}
+
+
+/* =========================================
+   CLICKABLE IMAGES
+========================================= */
+
+.image-link {
+    display: block;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
     line-height: 0;
+
     text-decoration: none;
 }
 
-a img {
+.image-link img {
     display: block;
+
     width: 100%;
     max-width: 100%;
+
     height: auto;
+
     margin: 0;
+    padding: 0;
 }
 
-/* =========================
-   HORIZONTAL SCROLL SLIDER
-========================= */
+
+/* =========================================
+   MANUAL TOUCH SLIDER
+========================================= */
 
 .slider {
+
     width: 100%;
+
     overflow: hidden;
-    margin: 15px 0 0;
+
+    margin: 12px 0 12px;
+
     padding: 0;
 
+    /*
+       Allow normal vertical page scrolling
+       while horizontal swipe works inside
+       the slider.
+    */
     touch-action: pan-y;
+
     cursor: grab;
 
     user-select: none;
     -webkit-user-select: none;
 
-    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
 }
+
 
 .slider:active {
     cursor: grabbing;
 }
 
+
+/* =========================================
+   SLIDER TRACK
+========================================= */
+
 .track {
+
     display: flex;
+
     width: max-content;
+
+    margin: 0;
+    padding: 0;
+
+    transform: translate3d(0, 0, 0);
+
     will-change: transform;
 }
 
+
+/* =========================================
+   SLIDE
+========================================= */
+
 .slide {
-    flex: 0 0 90vw;
-    width: 90vw;
-    margin-right: 10px;
+
+    flex: 0 0 88vw;
+
+    width: 88vw;
+
+    margin-right: 8px;
+
+    padding: 0;
 }
 
+
+/* =========================================
+   SLIDER IMAGE
+========================================= */
+
 .slide img {
+
     display: block;
 
     width: 100%;
+
     height: auto;
 
     aspect-ratio: 1 / 1;
+
     object-fit: cover;
 
     margin: 0;
     padding: 0;
 
+    /*
+       Prevent normal browser image dragging.
+    */
     pointer-events: none;
+
     -webkit-user-drag: none;
 }
 
-/* Mobile */
+
+/* =========================================
+   MOBILE
+========================================= */
+
 @media screen and (max-width: 500px) {
 
     .slider {
         margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .slide {
+
         flex: 0 0 88vw;
+
         width: 88vw;
+
         margin-right: 8px;
+
     }
 
 }
 
-/* Desktop */
+
+/* =========================================
+   DESKTOP
+========================================= */
+
 @media screen and (min-width: 501px) {
 
     .slide {
+
         flex: 0 0 420px;
+
         width: 420px;
+
+        margin-right: 12px;
+
     }
 
 }
@@ -137,322 +249,443 @@ a img {
 
 </head>
 
+
 <body>
 
-<!-- =========================
-     MAIN IMAGES
-========================= -->
+
+<!-- =========================================
+     IMAGE 1
+========================================= -->
 
 <img
-src="Image/1.webp?raw=true"
-loading="lazy"
-alt="गढ़िया गाँव प्लॉट"
-
->
-
-<img
-src="Image/2.webp?raw=true"
-loading="lazy"
-alt="गढ़िया गाँव प्लॉट"
-
->
-
-<img
-src="Image/3.webp?raw=true"
-loading="lazy"
-alt="गढ़िया गाँव प्लॉट"
-
->
-
-<img
-src="Image/4.webp?raw=true"
-loading="lazy"
-alt="गढ़िया गाँव प्लॉट"
-
->
-
-<!-- Google Maps -->
-
-<a
-href="https://maps.app.goo.gl/rbMPVuyPNJwrTDot5?g_st=awb"
-target="_blank"
-rel="noopener"
-
->
-
-```
-<img
-    src="Image/5.webp?raw=true"
+    class="page-image"
+    src="Image/1.webp?raw=true"
     loading="lazy"
-    alt="गढ़िया गाँव लोकेशन"
+    alt="गढ़िया गाँव प्लॉट"
 >
-```
 
-</a>
 
-<!-- Call -->
+<!-- =========================================
+     SLIDER
+     SHOWS IMMEDIATELY AFTER IMAGE 1
+========================================= -->
 
-<a href="tel:8400638468">
-
-```
-<img
-    src="Image/6.webp?raw=true"
-    loading="lazy"
-    alt="कॉल करें"
+<div
+    class="slider"
+    id="slider"
 >
-```
 
-</a>
+    <div
+        class="track"
+        id="track"
+    >
 
-<!-- =========================
-     CONTINUOUS SCROLL SLIDER
-========================= -->
 
-<div class="slider" id="slider">
+        <!-- SLIDE 1 -->
 
-<div class="track" id="track">
+        <div class="slide">
 
-    <div class="slide">
-        <img
-            src="scroll/scroll (1).webp"
-            loading="lazy"
-            alt="Plot Image 1"
-        >
-    </div>
+            <img
+                src="scroll/scroll (1).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 1"
+            >
 
-    <div class="slide">
-        <img
-            src="scroll/scroll (2).webp"
-            loading="lazy"
-            alt="Plot Image 2"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (3).webp"
-            loading="lazy"
-            alt="Plot Image 3"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (4).webp"
-            loading="lazy"
-            alt="Plot Image 4"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (5).webp"
-            loading="lazy"
-            alt="Plot Image 5"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (6).webp"
-            loading="lazy"
-            alt="Plot Image 6"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (7).webp"
-            loading="lazy"
-            alt="Plot Image 7"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (8).webp"
-            loading="lazy"
-            alt="Plot Image 8"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (9).webp"
-            loading="lazy"
-            alt="Plot Image 9"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (10).webp"
-            loading="lazy"
-            alt="Plot Image 10"
-        >
-    </div>
-
-    <div class="slide">
-        <img
-            src="scroll/scroll (11).webp"
-            loading="lazy"
-            alt="Plot Image 11"
         </div>
 
-</div>
-```
+
+        <!-- SLIDE 2 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (2).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 2"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 3 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (3).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 3"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 4 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (4).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 4"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 5 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (5).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 5"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 6 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (6).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 6"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 7 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (7).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 7"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 8 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (8).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 8"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 9 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (9).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 9"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 10 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (10).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 10"
+            >
+
+        </div>
+
+
+        <!-- SLIDE 11 -->
+
+        <div class="slide">
+
+            <img
+                src="scroll/scroll (11).webp"
+                loading="lazy"
+                alt="गढ़िया गाँव प्लॉट 11"
+            >
+
+        </div>
+
+
+    </div>
 
 </div>
+
+
+<!-- =========================================
+     IMAGE 2
+========================================= -->
+
+<img
+    class="page-image"
+    src="Image/2.webp?raw=true"
+    loading="lazy"
+    alt="गढ़िया गाँव प्लॉट"
+>
+
+
+<!-- =========================================
+     IMAGE 3
+========================================= -->
+
+<img
+    class="page-image"
+    src="Image/3.webp?raw=true"
+    loading="lazy"
+    alt="गढ़िया गाँव प्लॉट"
+>
+
+
+<!-- =========================================
+     IMAGE 4
+========================================= -->
+
+<img
+    class="page-image"
+    src="Image/4.webp?raw=true"
+    loading="lazy"
+    alt="गढ़िया गाँव प्लॉट"
+>
+
+
+<!-- =========================================
+     GOOGLE MAP IMAGE
+========================================= -->
+
+<a
+    class="image-link"
+    href="https://maps.app.goo.gl/rbMPVuyPNJwrTDot5?g_st=awb"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+
+    <img
+        src="Image/5.webp?raw=true"
+        loading="lazy"
+        alt="गढ़िया गाँव लोकेशन"
+    >
+
+</a>
+
+
+<!-- =========================================
+     CALL IMAGE
+========================================= -->
+
+<a
+    class="image-link"
+    href="tel:8400638468"
+>
+
+    <img
+        src="Image/6.webp?raw=true"
+        loading="lazy"
+        alt="गढ़िया गाँव प्लॉट के लिए कॉल करें"
+    >
+
+</a>
+
 
 <script>
 
+/* =========================================
+   MANUAL TOUCH / MOUSE SLIDER
+========================================= */
+
 (function () {
 
-    const slider = document.getElementById("slider");
-    const track = document.getElementById("track");
+    const slider =
+        document.getElementById("slider");
+
+    const track =
+        document.getElementById("track");
+
 
     if (!slider || !track) {
         return;
     }
 
-    /*
-     * Clone all slides.
-     * This creates a seamless infinite slider.
-     */
 
-    const originalSlides = Array.from(track.children);
+    /* -----------------------------------------
+       VARIABLES
+    ----------------------------------------- */
 
-    originalSlides.forEach(function (slide) {
-        track.appendChild(slide.cloneNode(true));
-    });
-
-
-    let position = 0;
-
-    /*
-     * Scroll speed.
-     * Lower = slower
-     * Higher = faster
-     */
-
-    const speed = 0.7;
-
-    let halfWidth = 0;
-
-    let dragging = false;
+    let currentX = 0;
 
     let startX = 0;
 
     let startPosition = 0;
 
+    let isDragging = false;
 
-    /*
-     * Calculate the width of the
-     * original set of slides.
-     */
+    let maxScroll = 0;
 
-    function measure() {
 
-        halfWidth = track.scrollWidth / 2;
+    /* -----------------------------------------
+       CALCULATE SLIDER WIDTH
+    ----------------------------------------- */
+
+    function calculateWidth() {
+
+        maxScroll =
+            track.scrollWidth -
+            slider.clientWidth;
+
+
+        if (maxScroll < 0) {
+            maxScroll = 0;
+        }
+
+
+        /*
+         * Keep slider inside boundaries
+         */
+
+        currentX =
+            Math.max(
+                -maxScroll,
+                Math.min(
+                    0,
+                    currentX
+                )
+            );
+
+
+        updateSlider();
 
     }
 
 
-    /*
-     * Keep position inside the
-     * first set of slides.
-     */
+    /* -----------------------------------------
+       UPDATE POSITION
+    ----------------------------------------- */
 
-    function normalize(value) {
-
-        if (halfWidth <= 0) {
-            return 0;
-        }
-
-        value = value % halfWidth;
-
-        if (value < 0) {
-            value += halfWidth;
-        }
-
-        return value;
-
-    }
-
-
-    /*
-     * Move slider.
-     */
-
-    function setPosition(value) {
-
-        position = normalize(value);
+    function updateSlider() {
 
         track.style.transform =
             "translate3d(" +
-            (-position) +
+            currentX +
             "px, 0, 0)";
 
     }
 
 
-    /*
-     * Resize handling.
-     */
-
-    window.addEventListener(
-        "resize",
-        measure
-    );
-
-
-    measure();
-
-
-    /*
-     * Touch / Mouse drag
-     */
+    /* -----------------------------------------
+       POINTER DOWN
+    ----------------------------------------- */
 
     slider.addEventListener(
         "pointerdown",
         function (event) {
 
-            dragging = true;
+            isDragging = true;
 
-            startX = event.clientX;
+            startX =
+                event.clientX;
 
-            startPosition = position;
+            startPosition =
+                currentX;
 
-            slider.setPointerCapture(
-                event.pointerId
-            );
+
+            try {
+
+                slider.setPointerCapture(
+                    event.pointerId
+                );
+
+            } catch (error) {}
 
         }
     );
 
+
+    /* -----------------------------------------
+       POINTER MOVE
+    ----------------------------------------- */
 
     slider.addEventListener(
         "pointermove",
         function (event) {
 
-            if (!dragging) {
+            if (!isDragging) {
                 return;
             }
 
-            const distance =
-                event.clientX - startX;
 
-            setPosition(
-                startPosition - distance
-            );
+            const distance =
+                event.clientX -
+                startX;
+
+
+            let newPosition =
+                startPosition +
+                distance;
+
+
+            /*
+             * Don't move beyond
+             * the first slide.
+             */
+
+            newPosition =
+                Math.min(
+                    0,
+                    newPosition
+                );
+
+
+            /*
+             * Don't move beyond
+             * the last slide.
+             */
+
+            newPosition =
+                Math.max(
+                    -maxScroll,
+                    newPosition
+                );
+
+
+            currentX =
+                newPosition;
+
+
+            updateSlider();
 
         }
     );
 
 
+    /* -----------------------------------------
+       STOP DRAGGING
+    ----------------------------------------- */
+
     function stopDragging(event) {
 
-        dragging = false;
+        if (!isDragging) {
+            return;
+        }
+
+
+        isDragging = false;
+
 
         try {
 
@@ -470,52 +703,35 @@ rel="noopener"
         stopDragging
     );
 
+
     slider.addEventListener(
         "pointercancel",
         stopDragging
     );
 
-    slider.addEventListener(
-        "pointerleave",
-        function () {
 
-            /*
-             * Don't stop dragging on mobile.
-             * Pointer capture handles this.
-             */
+    /* -----------------------------------------
+       RESIZE
+    ----------------------------------------- */
 
-        }
+    window.addEventListener(
+        "resize",
+        calculateWidth
     );
 
 
-    /*
-     * Automatic continuous scrolling.
-     */
+    /* -----------------------------------------
+       INITIALIZE
+    ----------------------------------------- */
 
-    function animate() {
+    calculateWidth();
 
-        if (!dragging) {
-
-            setPosition(
-                position + speed
-            );
-
-        }
-
-        requestAnimationFrame(
-            animate
-        );
-
-    }
-
-
-    requestAnimationFrame(
-        animate
-    );
 
 })();
 
 </script>
 
+
 </body>
+
 </html>
